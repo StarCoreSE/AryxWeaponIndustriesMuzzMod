@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YyJDBScPsQe8MDi59Njv/mejItPqHHxzCcSmqqi4OH1jt2UNPE9LXIdqTN++RE15h7Mc3iQqvHzhcb8C2ABzvw==",
+  "dgSpecHash": "D3ksV9f6DkrmtTTlr3e+QVbbeXYELFFyAtWkp4c6gbccnq4etDm3oux5veCdeHUCFH6+uYaADIkeR3bTb1ud8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Muzzled\\AppData\\Roaming\\SpaceEngineers\\Mods\\AryxWeaponIndustriesMuzzMod\\CoreParts.csproj",
+  "projectFilePath": "C:\\Users\\User\\AppData\\Roaming\\SpaceEngineers\\Mods\\AryxWeaponIndustriesMuzzMod\\CoreParts.csproj",
   "expectedPackageFiles": [
-    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

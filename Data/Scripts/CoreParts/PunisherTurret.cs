@@ -67,7 +67,7 @@ namespace Scripts {
             HardPoint = new HardPointDef
             {
                 PartName = "Punisher Burst Cannon", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.75f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 3f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Basic, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
@@ -130,7 +130,7 @@ namespace Scripts {
                 {
                     RateOfFire = 250, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
-                    TrajectilesPerBarrel = 4, // Number of projectiles per muzzle per fire event.
+                    TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
@@ -141,7 +141,7 @@ namespace Scripts {
                     HeatSinkRate = 100, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
                     ShotsInBurst = 4, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
-                    DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayAfterBurst = 60, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // Visual only, 0 disables and uses RateOfFire.
@@ -152,9 +152,9 @@ namespace Scripts {
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "ArcWepShipARYXBurstCannon_Fire", // Audio for firing.
-                    FiringSoundPerShot = false, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    FiringSound = "PunisherNewFire", // Audio for firing.
+                    FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
+                    ReloadSound = "PunisherNewReload", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "WepTurretGatlingRotate", // Audio played when turret is moving.
                     BarrelRotationSound = "WepShipGatlingRotation",
@@ -195,6 +195,7 @@ namespace Scripts {
             },
             Ammos = new[] {
                 AryxBurstAmmoWC,
+                AryxBurstAmmoWCSplit,
                 AryxHEBurstAmmoWC,
                 AryxFlakShrapWC // Must list all primary, shrapnel, and pattern ammos.
             },
