@@ -47,7 +47,7 @@
             <DisplayName>Burst Cannon</DisplayName>
             <Description>Variants of the Spitfire Burst Cannon.</Description>
             <Blocks>
-				<Block Type="ConveyorSorter" Subtype="ARYXBurstTurretSlanted" />
+				<Block Type="ConveyorSorter" Subtype="ARYXBurstTurret" />
 				<Block Type="ConveyorSorter" Subtype="ARYXBurstTurretSlanted" />				
 			
 				
