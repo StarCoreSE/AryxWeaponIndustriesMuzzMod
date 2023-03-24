@@ -67,9 +67,9 @@ namespace Scripts {
             HardPoint = new HardPointDef
             {
                 PartName = "Punisher Burst Cannon", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.1f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 0.25f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                DeviateShotAngle = 1f, // Projectile inaccuracy in degrees.
+                AimingTolerance = 1.75f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+                AimLeadingPrediction = Basic, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
@@ -130,7 +130,7 @@ namespace Scripts {
                 {
                     RateOfFire = 250, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
-                    TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
+                    TrajectilesPerBarrel = 4, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 240, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
@@ -165,7 +165,7 @@ namespace Scripts {
 
                     Effect1 = new ParticleDef
                     {
-                        Name = "Aryx_120_muzzleflash", // Smoke_LargeGunShot
+                        Name = "Muzzle_Flash_Autocannon", // Smoke_LargeGunShot
                         Color = Color(red: 1, green: 1, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: 0),
 
@@ -194,10 +194,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                AryxBurstAmmoWC,
-                AryxBurstAmmoWCSplit,
-                AryxHEBurstAmmoWC,
-                AryxFlakShrapWC // Must list all primary, shrapnel, and pattern ammos.
+                AryxBurstAmmoWC,// Must list all primary, shrapnel, and pattern ammos.
             },
             //Animations = Weapon75_Animation,
             //Upgrades = UpgradeModules,
