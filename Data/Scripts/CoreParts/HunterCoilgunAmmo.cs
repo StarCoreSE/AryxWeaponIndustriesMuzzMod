@@ -711,17 +711,17 @@ namespace Scripts
                 Lines = new LineDef
                 {
                     ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    WidthVariance = Random(start: 0f, end: 1.025f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f, //
-                        Width = 0.1f, //
+                        Length = 25f, //
+                        Width = 1f, //
                         Color = Color(red: 15, green: 20, blue: 59, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            "AryxBallisticTracer", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
                         Segmentation = new SegmentDef
@@ -745,7 +745,7 @@ namespace Scripts
                     {
                         Enable = true,
                         Textures = new[] {
-                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            "AryxPulseLaserEffectL2", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal,
                         DecayTime = 120, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
@@ -757,7 +757,7 @@ namespace Scripts
                     },
                     OffsetEffect = new OffsetEffectDef
                     {
-                        MaxOffset = 0,// 0 offset value disables this effect
+                        MaxOffset = 0.1,// 0 offset value disables this effect
                         MinLength = 0.2f,
                         MaxLength = 3,
                     },
