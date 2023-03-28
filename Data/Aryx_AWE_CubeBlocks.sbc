@@ -524,9 +524,9 @@ Ammunition: [8000m/s,] [Kinetic]
       <PCU>50</PCU>      
     </Definition>
 
-	<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+	<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
-        <TypeId>LargeMissileTurret</TypeId>
+        <TypeId>ConveyorSorter</TypeId>
         <SubtypeId>ARYXMagnetarCannon</SubtypeId>
       </Id>
       <DisplayName>K8A-3SC Magnetar Shock Cannon</DisplayName>
