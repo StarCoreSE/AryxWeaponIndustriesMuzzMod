@@ -35,10 +35,10 @@ namespace Scripts {
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
+                    Grids, Neutrals, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
+                    Offense, Power, Production, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
                 },
                 ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
@@ -55,8 +55,8 @@ namespace Scripts {
             {
                 PartName = "Apollo 250mm Railgun Turret", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0.1f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 2f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+                AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
@@ -115,17 +115,17 @@ namespace Scripts {
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 30, // Set this to 3600 for beam weapons.
+                    RateOfFire = 90, // Set this to 3600 for beam weapons.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 180, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 2000, // Heat generated per shot.
-                    MaxHeat = 3000, // Max heat before weapon enters cooldown (70% of max heat).
-                    Cooldown = 0.8f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
-                    HeatSinkRate = 1000, // Amount of heat lost per second.
+                    HeatPerShot = 6, // Heat generated per shot.
+                    MaxHeat = 8, // Max heat before weapon enters cooldown (70% of max heat).
+                    Cooldown = 0.9f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
+                    HeatSinkRate = 2, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
@@ -182,8 +182,8 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                AryxRailgunAmmo,
-                AryxRailgunAmmoFrag,
+                
+                
                 AryxRailgunAmmo_Mag,
                 AryxRailgunAmmoFrag_Mag,
                 AryxRailgunAmmo_Mag_Ping,
