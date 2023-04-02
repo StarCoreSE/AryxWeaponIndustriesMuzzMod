@@ -384,15 +384,15 @@ BAP:
 			<Model>Models\PlasmaGun\LG_ARYX_StaticPlasmaPulser.mwm</Model>
 			
 			<Components>
-				<Component Subtype="SteelPlate" Count="250" />
-				<Component Subtype="Construction" Count="100" />
+				<Component Subtype="SteelPlate" Count="500" />
+				<Component Subtype="Construction" Count="200" />
 				<Component Subtype="PowerCell" Count="30" />	
 				<Component Subtype="Superconductor" Count="60" />				
 				<Component Subtype="LargeTube" Count="20" />	
 				<Component Subtype="ElectromagnetAWE" Count ="120" />	
 				<Component Subtype="Computer" Count="100" />
-				<Component Subtype="Construction" Count="100" />
-				<Component Subtype="SteelPlate" Count="250" />
+				<Component Subtype="Construction" Count="200" />
+				<Component Subtype="SteelPlate" Count="200" />
 			</Components>
 			
 			
