@@ -723,6 +723,33 @@
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
+
+      <AmmoMagazine>
+        <Id>
+          <TypeId>AmmoMagazine</TypeId>
+          <SubtypeId>HeliosAmmo</SubtypeId>
+        </Id>
+        <DisplayName>ManetarMag</DisplayName>
+        <Icon>Textures\GUI\Icons\ammo\AWETyphoonAmmo.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.6</Y>
+          <Z>0.6</Z>
+        </Size>
+        <Mass>180</Mass>
+        <Volume>1</Volume>
+        <Model>Models\AWE_Ammo\Aryx600mmShell.mwm</Model>
+        <PhysicalMaterial>Ammo</PhysicalMaterial>
+        <Capacity>4</Capacity>
+        <AmmoDefinitionId Subtype="AryxMagnetarAmmoMagDEF" />
+
+        <MinimumOfferAmount>10</MinimumOfferAmount>
+        <MaximumOfferAmount>100</MaximumOfferAmount>
+        <MinimumOrderAmount>10</MinimumOrderAmount>
+        <MaximumOrderAmount>100</MaximumOrderAmount>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </AmmoMagazine>
+      
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
