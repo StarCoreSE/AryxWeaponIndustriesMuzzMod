@@ -41,7 +41,7 @@
             </Size>
             <Mass>12</Mass>
             <Volume>6</Volume>
-            <Model>Models\Weapons\AryxFlakAmmo.mwm</Model>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>50</Capacity>
             <AmmoDefinitionId Subtype="AryxFlakAmmo" />
@@ -66,7 +66,7 @@
             </Size>
             <Mass>30</Mass>
             <Volume>12</Volume>
-            <Model>Models\AWE_Ammo\AryxFlakAmmo.mwm</Model>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
             <AmmoDefinitionId Subtype="AryxHeavyFlakAmmo" />
@@ -402,7 +402,7 @@
             </Size>
             <Mass>25</Mass>
             <Volume>10</Volume>
-            <Model>Models\AWE_Ammo\AryxFlakAmmo.mwm</Model>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>60</Capacity>
             <AmmoDefinitionId Subtype="AryxCodexAmmo" />
