@@ -13,7 +13,7 @@ namespace Scripts
 
             EventParticles = new Dictionary<PartAnimationSetDef.EventTriggers, EventParticle[]>
             {
-                [PreFire] = new[]{ //This particle fires in the Prefire state, during the 10 second windup the gauss cannon has.
+                [Reloading] = new[]{ //This particle fires in the Prefire state, during the 10 second windup the gauss cannon has.
                                    //Valid options include Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire.
                        new EventParticle
                        {
@@ -24,7 +24,7 @@ namespace Scripts
                            ForceStop = true,
                            Particle = new ParticleDef
                            {
-                               Name = "Aryx_Gauss_Windup_Effect", //Particle subtypeID
+                               Name = "Aryx_Gauss_Windup_Effect2", //Particle subtypeID
                                Color = Color(red: 25, green: 25, blue: 25, alpha: 1), //This is redundant as recolouring is no longer supported.
                                Extras = new ParticleOptionDef //do your particle colours in your particle file instead.
                                {

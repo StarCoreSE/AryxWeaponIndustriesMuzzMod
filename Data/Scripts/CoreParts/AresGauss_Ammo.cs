@@ -300,7 +300,7 @@ namespace Scripts
             {
                 ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
                 VisualProbability = 1f, // %
-                ShieldHitDraw = false,
+                ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef
@@ -314,7 +314,7 @@ namespace Scripts
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "AWEGaussImpact",
+                        Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
@@ -337,18 +337,18 @@ namespace Scripts
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: -10f, end: 10f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 100f, //
-                        Width = 1f, //
-                        Color = Color(red: 45, green: 45, blue: 45f, alpha: 10), // RBG 255 is Neon Glowing, 100 is Quite Bright.
-                        VisualFadeStart = 120, // Number of ticks the weapon has been firing before projectiles begin to fade their color
-                        VisualFadeEnd = 480, // How many ticks after fade began before it will be invisible.
+                        Length = 10f, //
+                        Width = 0.25f, //
+                        Color = Color(red: 75, green: 25, blue: 10f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
+                        VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "AryxBallisticTracer", // Please always have this Line set, if this Section is enabled.
+                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
                         Segmentation = new SegmentDef
@@ -362,7 +362,7 @@ namespace Scripts
                             Speed = 1f, // meters per second
                             Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
                             WidthMultiplier = 1f,
-                            Reverse = false, 
+                            Reverse = false,
                             UseLineVariance = true,
                             WidthVariance = Random(start: 0f, end: 0f),
                             ColorVariance = Random(start: 0f, end: 0f)
@@ -372,21 +372,21 @@ namespace Scripts
                     {
                         Enable = true,
                         Textures = new[] {
-                            "AryxPulseLaserEffectL2", // Please always have this Line set, if this Section is enabled.
+                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal,
-                        DecayTime = 196, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 30, green: 30, blue: 30, alpha: 1),
-                        Back = true,
-                        CustomWidth = 2,
-                        UseWidthVariance = false,
+                        DecayTime = 120, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        Color = Color(red: 20, green: 10, blue: 20, alpha: 1),
+                        Back = false,
+                        CustomWidth = 0.25f,
+                        UseWidthVariance = true,
                         UseColorFade = true,
                     },
                     OffsetEffect = new OffsetEffectDef
                     {
-                        MaxOffset = 0,// 0 offset value disables this effect
-                        MinLength = 0.2f,
-                        MaxLength = 3,
+                        MaxOffset = 4,// 0 offset value disables this effect
+                        MinLength = 12f,
+                        MaxLength = 120,
                     },
                 },
             },
