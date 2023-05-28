@@ -159,7 +159,7 @@ namespace Scripts {
 
                     Effect1 = new ParticleDef
                     {
-                        Name = "AWE_ShockCannon_Flash", // Smoke_LargeGunShot
+                        Name = "Aryx_Gauss_firing_effect", // Smoke_LargeGunShot
                         Color = Color(red: 0.75f, green: 0.75f, blue: 1f, alpha: 1),
                         Offset = Vector(x: 0, y: 0, z: -7.5f),
 
@@ -167,9 +167,9 @@ namespace Scripts {
                         {
                             Loop = false,
                             Restart = true,
-                            MaxDistance = 500,
+                            MaxDistance = 2500,
                             MaxDuration = 0,
-                            Scale = 0.65f,
+                            Scale = 1f,
                         },
                     },
                     Effect2 = new ParticleDef

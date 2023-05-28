@@ -298,38 +298,39 @@ namespace Scripts
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
-                VisualProbability = 1f, // %
+                ModelName = "",
+                VisualProbability = 1f,
                 ShieldHitDraw = true,
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef
                     {
                         Name = "", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
+                        //shrinkbydistance = false, obselete
+                        Color = Color(red: 0, green: 0, blue: 0, alpha: 0),
+                        Offset = Vector(x: 0, y: -1, z: 0),
                         Extras = new ParticleOptionDef
                         {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 1000,
+                            MaxDuration = 1,
                             Scale = 1,
                         },
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "",
+                        Name = "AWEGaussImpact",
                         ApplyToShield = true,
+                        //shrinkbydistance = false, obselete
+                        Color = Color(red: 0f, green: 0f, blue: 0f, alpha: 0),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
-                            HitPlayChance = 1f,
-                        },
-                    },
-                    Eject = new ParticleDef
-                    {
-                        Name = "",
-                        ApplyToShield = true,
-                        Offset = Vector(x: 0, y: 0, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
+                            Loop = false,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 1,
                             Scale = 1,
                             HitPlayChance = 1f,
                         },
@@ -337,31 +338,31 @@ namespace Scripts
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: -10f, end: 10f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 1.025f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f, //
-                        Width = 0.25f, //
-                        Color = Color(red: 75, green: 25, blue: 10f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Length = 100f,
+                        Width = 2f,
+                        Color = Color(red: 35, green: 10, blue: 80, alpha: 1),
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            "AryxBallisticTracer",
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
                         Segmentation = new SegmentDef
                         {
                             Enable = false, // If true Tracer TextureMode is ignored
                             Textures = new[] {
-                                "", // Please always have this Line set, if this Section is enabled.
+                                "AryxPulseLaserEffectL2",
                             },
-                            SegmentLength = 0f, // Uses the values below.
+                            SegmentLength = 100f, // Uses the values below.
                             SegmentGap = 0f, // Uses Tracer textures and values
-                            Speed = 1f, // meters per second
-                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
-                            WidthMultiplier = 1f,
+                            Speed = 50f, // meters per second
+                            Color = Color(red: 5f, green: 5, blue: 35f, alpha: 0.5f),
+                            WidthMultiplier = 2f,
                             Reverse = false,
                             UseLineVariance = true,
                             WidthVariance = Random(start: 0f, end: 0f),
@@ -372,21 +373,21 @@ namespace Scripts
                     {
                         Enable = true,
                         Textures = new[] {
-                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            "AryxPulseLaserEffectL2",
                         },
                         TextureMode = Normal,
-                        DecayTime = 120, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 20, green: 10, blue: 20, alpha: 1),
+                        DecayTime = 48,
+                        Color = Color(red: 10, green: 6, blue: 25, alpha: 1),
                         Back = false,
-                        CustomWidth = 0.25f,
-                        UseWidthVariance = true,
+                        CustomWidth = 2f,
+                        UseWidthVariance = false,
                         UseColorFade = true,
                     },
                     OffsetEffect = new OffsetEffectDef
                     {
-                        MaxOffset = 4,// 0 offset value disables this effect
-                        MinLength = 12f,
-                        MaxLength = 120,
+                        MaxOffset = 0,// 0 offset value disables this effect
+                        MinLength = 0.2f,
+                        MaxLength = 5,
                     },
                 },
             },
