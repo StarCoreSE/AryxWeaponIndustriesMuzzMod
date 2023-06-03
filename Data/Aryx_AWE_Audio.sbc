@@ -281,7 +281,7 @@
       <PreventSynchronization>1</PreventSynchronization>
       <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
       <DynamicMusicAmount>3</DynamicMusicAmount>
-      <Volume>2</Volume>
+      <Volume>1</Volume>
 	  <DistantSounds>
 		<DistantSound DistanceCrossFade="10" Distance="400" Sound = "ArcWepShipARYX_HeavyCannonHitDistant" />
 	  </DistantSounds>		  
@@ -989,7 +989,7 @@
       <PreventSynchronization>0</PreventSynchronization>
       <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
       <DynamicMusicAmount>3</DynamicMusicAmount>
-      <Volume>3</Volume>
+      <Volume>1</Volume>
       <Waves>
         <Wave Type="D3">
           <Start>Audio\ares\RailcannonFire1.wav</Start>
