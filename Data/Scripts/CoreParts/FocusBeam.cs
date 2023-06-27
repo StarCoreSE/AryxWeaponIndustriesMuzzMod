@@ -185,7 +185,7 @@ namespace Scripts {
             },
             Ammos = new[] {
                 AryxSmallFocusBeamLanceAmmo,
-                AryxSmallFocusPulseLanceAmmo, // Must list all primary, shrapnel, and pattern ammos.
+                //AryxSmallFocusPulseLanceAmmo, // Must list all primary, shrapnel, and pattern ammos.
             },
             //Animations = Weapon75_Animation,
             //Upgrades = UpgradeModules,
