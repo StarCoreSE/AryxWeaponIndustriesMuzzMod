@@ -542,14 +542,14 @@ Ammunition: [1200m/s,] [Energy]
       <ModelOffset x="0" y="0" z="0" />
 	  <Model>Models\AWE_ShockCannon\ARYX_MagnetarCannonBase.mwm</Model>
       <Components>
-        <Component Subtype="SteelPlate" Count="1250" />
+        <Component Subtype="SteelPlate" Count="125" />
         <Component Subtype="Construction" Count="300" />
         <Component Subtype="MetalGrid" Count="200" />
         <Component Subtype="LargeTube" Count="70" />
         <Component Subtype="ElectromagnetAWE" Count="200" />
         <Component Subtype="Computer" Count="325" />
         <Component Subtype="Superconductor" Count="100" />
-        <Component Subtype="GravityGenerator" Count="50" />			
+        <Component Subtype="GravityGenerator" Count="300" />			
         <Component Subtype="Motor" Count="200" />
         <Component Subtype="Construction" Count="150" />		
         <Component Subtype="SteelPlate" Count="750" />
