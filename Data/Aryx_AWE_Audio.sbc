@@ -603,7 +603,7 @@
       <PreventSynchronization>1</PreventSynchronization>
       <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
       <DynamicMusicAmount>3</DynamicMusicAmount>
-      <Volume>3</Volume>
+      <Volume>1.5</Volume>
 	  <DistantSounds>
 		<DistantSound DistanceCrossFade="10" Distance="1500" Sound = "ArcWepShipARYXTyphoon_DistantFire" />
 	  </DistantSounds>		  
@@ -672,7 +672,7 @@
       <PreventSynchronization>1</PreventSynchronization>
       <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
       <DynamicMusicAmount>3</DynamicMusicAmount>
-      <Volume>3</Volume>	  
+      <Volume>1.5</Volume>	  
       <Waves>
         <Wave Type="D3">
           <Start>Audio\Aryx\heavy_cannons\aryx_hurricane_fire_distant_01.wav</Start>
